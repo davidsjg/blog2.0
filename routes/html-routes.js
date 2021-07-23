@@ -6,7 +6,7 @@ module.exports = (app) => {
     app.get('/singleQuote', (req, res) => 
         res.render('single-quote')
     )
-    app.get('/index', (req, res) => 
+    app.get('/singleQuote', (req, res) => 
         res.render('index')
     )
     
