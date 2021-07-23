@@ -2,13 +2,13 @@
   "development": {
     "username": "root",
     "password": "Colorado23",
-    "database": "blogger",
+    "database": "quotes_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "Colorado23",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
