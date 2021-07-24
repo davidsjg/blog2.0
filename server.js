@@ -12,25 +12,14 @@ app.use(express.json());
 
 app.use(compression())
 
-
-
-// Set the port of our application
-// process.env.PORT lets the port be set by Heroku
-
-
-// Use the express.static middleware to serve static content for the app from the "public" directory in the application directory.
-
-
-// Sets up the Express app to handle data parsing
-
-
-// app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-// app.set('view engine', 'handlebars');
-
-//extra
 var hbs = exphbs.create({
   defaultLayout: "main",
+
   extname: ".hbs",
+  runtimeOptions: {
+    allowProtoPropertiesByDefault: true,
+
+  },
   helpers: {
     section: function(name, options) { 
       if (!this._sections) this._sections = {};

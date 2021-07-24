@@ -1,24 +1,20 @@
 module.exports = (sequelize, DataTypes) => {
-    const Post = sequelize.define('Post', {
-        title: {
+    const Quote = sequelize.define('Quote', {
+        author: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
             },
         },
-        body: {
+        quote: {
             type: DataTypes.TEXT, 
             allowNull: false,
             validate: {
                 len: [1],
             },
         },
-        category: {
-            type: DataTypes.STRING,
-            defaultValue: 'Personal',
-        },
     })
 
-    return Post;
+    return Quote;
 }

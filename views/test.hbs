@@ -1,0 +1,13 @@
+<ul>
+  {{#each results}}
+  <li>
+    <p><span class="label">ID:</span> {{this.id}}</p>
+    <p><span class="label">Quote:</span> {{this.author}}</p>
+    <p><span class="label">Author:</span> {{this.quote}}</p>
+
+    <button class='danger' class="btn btn-primary" data-id="{{this.id}}" class="delquote">Delete</button>
+
+    <a href="/{{this.id}}">Update this quote</a>
+  </li>
+  {{/each}}
+</ul>
