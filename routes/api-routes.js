@@ -8,9 +8,10 @@ module.exports = (app) => {
 app.get('/api/quotes', (req, res) => {
 
 
-    db.Quote.findAll({}).then((quotes) => {
+    db.Quote.findAll({})
+    .then((quotes) => {
       console.log("BACKEND FOO quote = " + quotes)
-      return res.render('index', { results: quotes });
+      return res.render('single-quote', { results: quotes });
       // res.json(quotes);
 
     })

@@ -13,10 +13,9 @@ const getPosts = () => {
       'Content-Type': 'application/json',
     },
   })
-    .then((quotes) => {
-      console.log('succes at front end NOT ' + quotes)
+    .then(() => {
+      console.log('succes at front end NOT ')
   })
-    .catch((error) => console.error('Error:', error));
 
 }
 getPosts()

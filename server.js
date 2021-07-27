@@ -28,7 +28,8 @@ var hbs = exphbs.create({
       }
   }    
 });
-app.engine('hbs', hbs.engine, exphbs({ defaultLayout: 'main' }));
+// app.engine('hbs', hbs.engine, exphbs({ defaultLayout: 'main' }));
+app.engine('hbs', hbs.engine, exphbs ({ defaultLayout: "main", partialsDir: __dirname + './public/views'}));
 app.set('view engine', '.hbs');
 
 const HTMLrouter = require("./routes/html-routes");
